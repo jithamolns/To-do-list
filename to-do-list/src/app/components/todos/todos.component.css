@@ -31,6 +31,10 @@
 	font-size: 14px;
 }
 
+.todo .content:hover{
+	color: blue;
+}
+
 .todo.done .content {
 	text-decoration: line-through;
 }
@@ -44,6 +48,15 @@
 	font-size: 14px;
 	outline: none;
 	flex: 1 1 100%;
+}
+
+.delete{
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.delete:hover{
+	color: blue;
 }
 
 .submit-btn {
@@ -62,10 +75,12 @@
 	cursor: pointer;
 	flex: 1 1 50px;
 }
+
 .submit-btn:hover{
 	background-color: white;
 	color: #48a7fe;
 }
+
 .err{
 	color: red;
 	font-size: 14px;
