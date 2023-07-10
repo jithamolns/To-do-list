@@ -12,7 +12,7 @@
         />        
         <input type="submit" class="submit-btn" value="Add" />
        </div>
-       <p>{{err}}</p>
+       <p class="err">{{err}}</p>
     </form>
 
     <div *ngFor="let todo of todos; let i = index;" class="todo {{(todo.completed ? 'done': '')}}" >

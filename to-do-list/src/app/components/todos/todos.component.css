@@ -28,6 +28,7 @@
 
 .todo .content {
 	flex: 1 1 100%;
+	font-size: 14px;
 }
 
 .todo.done .content {
@@ -64,4 +65,9 @@
 .submit-btn:hover{
 	background-color: white;
 	color: #48a7fe;
+}
+.err{
+	color: red;
+	font-size: 14px;
+	font-style: italic;
 }
