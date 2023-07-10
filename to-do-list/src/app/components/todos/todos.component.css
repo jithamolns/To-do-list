@@ -1,3 +1,12 @@
+
+.todo-body{
+	width: 70%;
+	margin: auto;
+}
+.form-flex{
+	display: flex;
+	margin-bottom: 20px;
+}
 .todo {
 	display: flex;
 	padding: 10px 15px;
@@ -29,11 +38,11 @@
 	display: inline-block;
 	padding: 10px 15px;
 	appearance: none;
-	border: none;
+	border: 2px solid #F3F3F3;
 	background-color: #F3F3F3;
-	margin-top: 15px;
-	font-size: 18px;
+	font-size: 14px;
 	outline: none;
+	flex: 1 1 100%;
 }
 
 .submit-btn {
@@ -41,13 +50,18 @@
 	width: 100%;
 	max-width: 200px;
 	appearance: none;
-	border: none;
+	border: 1px solid #48a7fe;
 	outline: none;
 	background: none;
 	background-color: #48a7fe;
 	color: #FFF;
-	margin: 15px auto;
 	padding: 10px 15px;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 700;
+	cursor: pointer;
+	flex: 1 1 50px;
+}
+.submit-btn:hover{
+	background-color: white;
+	color: #48a7fe;
 }

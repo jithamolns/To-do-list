@@ -1,19 +1,22 @@
+<div class="todo-body">
+    <h1>{{title}}</h1>
 
-<h1>{{title}}</h1>
+    <form (submit)="addTask()">
+       <div class="form-flex">
+        <input 
+            type="text" 
+            class="taskName"
+            placeholder="Enter a task"
+            name="inputTodo"
+            [(ngModel)] = "inputTodo"
+        />
+        <input type="submit" class="submit-btn" value="Add" />
+       </div>
+    </form>
 
-<form (submit)="addTask()">
-  <input 
-    type="text" 
-    class="taskName"
-    placeholder="Enter a task"
-    name="inputTodo"
-    [(ngModel)] = "inputTodo"
-  />
-  <input type="submit" class="submit-btn" value="Add task" />
-</form>
-
-<div *ngFor="let todo of todos; let i = index;" class="todo {{(todo.completed ? 'done': '')}}" >
-    <!-- <div class="id">{{ i }}</div> -->
-    <div class="content" (click) = "toggleDone(i)">{{ todo.content }}</div>
-    <div class="delete" (click) = "deleteTask(i)">Delete</div>
+    <div *ngFor="let todo of todos; let i = index;" class="todo {{(todo.completed ? 'done': '')}}" >
+        <!-- <div class="id">{{ i }}</div> -->
+        <div class="content" (click) = "toggleDone(i)">{{ todo.content }}</div>
+        <div class="delete" (click) = "deleteTask(i)">Delete</div>
+    </div>
 </div>
