@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from './../../models/Todo';
 
 @Component({
   selector: 'app-todos',
@@ -7,10 +8,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosComponent implements OnInit{
 
+  title = 'To Do List';
+  todos!: Todo[];
+  inputTodo:string = '';
+
   constructor(){ }
-  
+
   ngOnInit(): void {
-    
+    this.todos = [
+      {
+        content: 'First task',
+        completed: false
+      },
+      {
+        content: 'Second Task',
+        completed: true
+      }
+    ]
+  }
+
+  toggleDone(id: number){
+    this.todos.map((v,i)=>{
+      if(i == id) v.completed = !v.completed;
+      return v;
+    })
+  }
+
+  deleteTask(id: number){
+    this.todos = this.todos.filter((v,i)=> i !== id);
+  }
+
+  addTask(){
+    this.todos.push({
+      content: this.inputTodo,
+      completed: false      
+    })
+    this.inputTodo = "";
   }
 
 }
