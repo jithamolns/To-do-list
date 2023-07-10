@@ -8,9 +8,10 @@ import { Todo } from './../../models/Todo';
 })
 export class TodosComponent implements OnInit{
 
-  title = 'To Do List';
+  title = 'My To-Do List';
   todos!: Todo[];
   inputTodo:string = '';
+  err:string = '';
 
   constructor(){ }
 
@@ -39,10 +40,16 @@ export class TodosComponent implements OnInit{
   }
 
   addTask(){
-    this.todos.push({
-      content: this.inputTodo,
-      completed: false      
-    })
+    if(this.inputTodo!=''){
+      this.todos.push({
+        content: this.inputTodo,
+        completed: false      
+      })
+      this.err = '';
+    }else{
+      this.err = 'Please add a task';
+    }
+    
     this.inputTodo = "";
   }
 
