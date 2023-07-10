@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    padding: 30px;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+input{
+    margin-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    padding: 9px 20px;
+}
+button{
+    background-color: #7575fd;
+    padding: 10px 20px;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #5555b1;
+}

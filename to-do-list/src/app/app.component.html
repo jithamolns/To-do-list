@@ -6,10 +6,13 @@
 </div>
 
 <div class="taskList">
-  <ul *ngFor="let item of list">
-    <!-- <button (click)="removeTask(item.id)">Complete</button> -->
-    <li>{{item.name}} <button (click)="removeTask(item.id)">Remove</button></li>
-  </ul>
+  <table>
+    <tr *ngFor="let item of list">
+      <!-- <button (click)="removeTask(item.id)">Complete</button> -->
+      <td>{{item.name}} </td>
+      <td><button (click)="removeTask(item.id)">Remove</button></td>
+    </tr>
+  </table>
 </div>
 
 <router-outlet></router-outlet>
